@@ -1,5 +1,5 @@
 import configparser
-from datetime import date, datetime
+import datetime
 import time
 
 
@@ -10,7 +10,7 @@ def main():
     logExecution(utcnow)
 
 
-def logExecution(utcnow: date):
+def logExecution(utcnow: datetime):
     config = configparser.ConfigParser()
     config.read('../app.ini')
     lastRunFilePath = config['LOGGING']['LastRun']
